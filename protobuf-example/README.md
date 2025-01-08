@@ -35,3 +35,5 @@ enum AlleleType {
 ~/Downloads/protoc-29.2-win64/bin/protoc.exe --proto_path=src/main/java/proto/ --java_out=src/main/java/ src/main/java/proto/RawDataResult.proto
 ```
 
+!["protobuf-example Project"](images/project.png?raw=true)
+

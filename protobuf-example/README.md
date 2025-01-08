@@ -1,6 +1,6 @@
 # Serializing & Deserializing objects using Protobuf
 
-## Prerequisite : Download protoc
+## Prerequisite : Download protoc to compile .proto files and generate code
 Download the latest protoc from the https://github.com/protocolbuffers/protobuf/releases, depending on your machine download linux-x86_64.zip or osx-x86_64.zip
  or win64.zip bundle of protoc.
 

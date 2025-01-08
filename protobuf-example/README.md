@@ -3,6 +3,8 @@
 ## Prerequisite
 Download the latest protoc from the https://github.com/protocolbuffers/protobuf/releases
 
+!["Protobuf releases at Github"](images/github-protoc-releases.png?raw=true)
+
 ## Step 1 : Creating .proto file and defining messages
 ```proto
 syntax = "proto2";

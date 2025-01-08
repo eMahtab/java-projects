@@ -96,3 +96,10 @@ public class Serializer {
     }
 }
 ```
+
+```
+ cd ~/protobuf
+ ls -alh raw_data_result.bin
+ -rw-r--r-- 1 alamm 197121 **18K** Jan  8 12:06 raw_data_result.bin
+
+```

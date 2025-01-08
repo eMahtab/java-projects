@@ -37,3 +37,14 @@ enum AlleleType {
 
 !["protobuf-example Project"](images/project.png?raw=true)
 
+## Step 3 : Include protobuf-java dependency in pom.xml
+
+```xml
+<dependencies>
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>4.29.2</version>
+        </dependency>
+</dependencies>
+```

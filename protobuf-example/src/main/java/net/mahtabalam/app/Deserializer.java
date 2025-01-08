@@ -29,7 +29,6 @@ public class Deserializer {
         } catch (IOException e) {
             System.err.println("Failed to deserialize RawDataResult: " + e.getMessage());
         }
-
         return rawDataResult;
     }
 }

@@ -6,7 +6,7 @@ Download the latest protoc from the https://github.com/protocolbuffers/protobuf/
 
 !["Protobuf releases at Github"](images/github-protoc-releases.png?raw=true)
 
-## Step 1 : Creating .proto file and defining messages
+## Step 1 : Create .proto file and define messages
 ```proto
 syntax = "proto2";
 
@@ -30,7 +30,7 @@ enum AlleleType {
 }
 ```
 
-## Step 2 : Compiling and generating the Java classes
+## Step 2 : Compile and generate the Java classes
 ```
 ~/Downloads/protoc-29.2-win64/bin/protoc.exe --proto_path=src/main/java/proto/ --java_out=src/main/java/ src/main/java/proto/RawDataResult.proto
 ```

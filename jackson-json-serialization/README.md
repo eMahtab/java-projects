@@ -2,6 +2,8 @@
 
 ## Step 1 : Add the required Jackson databind dependency in pom.xml
 
+!["IntelliJ project"](images/project.png?raw=true)
+
 ```xml
 <dependencies>
         <dependency>

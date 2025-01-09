@@ -68,3 +68,7 @@ public class Serializer {
 }
 ```
 
+!["Jackson Json Serialization"](images/json-serialization.png?raw=true)
+
+
+

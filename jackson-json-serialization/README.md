@@ -16,7 +16,7 @@
 
 ## Step 2 : Serialize the Java object to Json using Jackson
 
-Below Serializer will serialize the RawDataResult instance to a file named **_raw_data_result.json_** inside users' home directory under jackson directory.
+Serializer will serialize the RawDataResult instance to a file named **_raw_data_result.json_** inside users' home directory under jackson directory.
 
 
 ```java

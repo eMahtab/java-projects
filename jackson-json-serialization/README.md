@@ -110,7 +110,14 @@ public class Deserializer {
 
 ## Compairing Protobuf binary serialized and Jackson json serialized file size
 
-In [protobuf-example project](https://github.com/eMahtab/java-projects/tree/master/protobuf-example) we serialized the same RawDataResult object to a binary file using Protobuf. 
+In [protobuf-example project](https://github.com/eMahtab/java-projects/tree/master/protobuf-example) we serialized the same RawDataResult object to a binary file using Protobuf. For this particular case, the serialized file size is same both by using Protobuf and Jackson Json. Usually the serialized, file size from protobuf is smaller than from its Json equivalent.
 
 !["Json and Binary Serialiazed file size comparison"](images/json-and-protobuf.png?raw=true)
+
+
+# References :
+
+1. https://www.baeldung.com/jackson-object-mapper-tutorial
+
+2. https://github.com/eMahtab/java-projects/tree/master/protobuf-example
 

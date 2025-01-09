@@ -6,7 +6,6 @@ import net.mahtabalam.model.RawDataResult;
 import net.mahtabalam.model.Well;
 
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class Serializer {

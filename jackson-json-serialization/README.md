@@ -103,7 +103,7 @@ public class Deserializer {
 ```
 
 
-# Compairing Protobuf binary serialized and Jackson json serialized file size
+## Compairing Protobuf binary serialized and Jackson json serialized file size
 
 !["Json and Binary Serialiazed file size comparison"](images/json-and-protobuf.png?raw=true)
 

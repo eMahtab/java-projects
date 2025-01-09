@@ -75,6 +75,8 @@ public class Serializer {
 
 # Step 3 : Deserialize the serialized object
 
+Deserializer will deserialize the RawDataResult instance from a file named **_raw_data_result.json_** inside user's home directory under jackson directory.
+
 ```java
 public class Deserializer {
 
@@ -107,6 +109,8 @@ public class Deserializer {
 
 
 ## Compairing Protobuf binary serialized and Jackson json serialized file size
+
+In [protobuf-example project](https://github.com/eMahtab/java-projects/tree/master/protobuf-example) we serialized the same RawDataResult object to a binary file using Protobuf. 
 
 !["Json and Binary Serialiazed file size comparison"](images/json-and-protobuf.png?raw=true)
 

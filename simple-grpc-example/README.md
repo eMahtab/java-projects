@@ -79,6 +79,12 @@ service ProductService {
 
 Note that we are using **`protoc-gen-grpc-java`** plugin with version 1.59.0, this grpc java plugin generates the Stub classes, making it easy to write the gRPC client and server.
 
+
+# Use the compatible version of protoc-gen-grpc-java plugin
+Make sure you are using the right version of protoc-gen-grpc-java plugin when compiling the .proto file with protoc. **In this example I use protoc-gen-grpc-java-1.59.0, and specify the path to the plugin .exe file when generating classes with protoc.**
+
+[Check the version details of protoc-gen-grpc-java](https://mvnrepository.com/artifact/io.grpc/protoc-gen-grpc-java)
+
 ```
 ~/Downloads/protoc-25.0-win64/bin/protoc.exe --proto_path=src/main/java/proto/ --java_out=src/main/java/ --grpc-java_out=src/main/java/ --plugin=protoc-gen-grpc-java=C:\\Users\\alamm\\Downloads\\protoc-gen-grpc-java-1.59.0-windows-x86_64.exe src/main/java/proto/ProductService.proto
 ```

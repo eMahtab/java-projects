@@ -1,0 +1,58 @@
+syntax = "proto3";
+
+option java_package = "net.mahtabalam.protos";
+option java_multiple_files = true;
+option java_outer_classname = "ProductServiceProto";
+
+message Product {
+    string productId = 1;
+    string productName = 2;
+    string description = 3;
+    map<string, string> attributes = 4;
+}
+
+message AddProductRequest {
+    Product product = 1;
+}
+
+message AddProductResponse {
+    string message = 1;
+}
+
+message GetAllProductsRequest {}
+
+message GetAllProductsResponse {
+    repeated Product products = 1;
+}
+
+message GetProductByIdRequest {
+    string productId = 1;
+}
+
+message GetProductByIdResponse {
+    Product product = 1;
+}
+
+message UpdateProductRequest {
+    Product product = 1;
+}
+
+message UpdateProductResponse {
+    string message = 1;
+}
+
+message DeleteProductRequest {
+    string productId = 1;
+}
+
+message DeleteProductResponse {
+    string message = 1;
+}
+
+service ProductService {
+    rpc AddProduct(AddProductRequest) returns (AddProductResponse);
+    rpc GetAllProducts(GetAllProductsRequest) returns (GetAllProductsResponse);
+    rpc GetProductById(GetProductByIdRequest) returns (GetProductByIdResponse);
+    rpc UpdateProduct(UpdateProductRequest) returns (UpdateProductResponse);
+    rpc DeleteProduct(DeleteProductRequest) returns (DeleteProductResponse);
+}

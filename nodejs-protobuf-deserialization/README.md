@@ -2,6 +2,9 @@
 
 In this project we deserialize, [the protobuf binary data which was originally serialized by a Java application](https://github.com/eMahtab/java-projects/tree/master/protobuf-example).
 
+Being able to deserialize to actual object which was serialized using a different runtime, this is the main advantage of protobuf.
+**So protobuf is language independent, provided that you follow the same schema.**
+
 
 # Step 1 : npm install protobufjs 
 

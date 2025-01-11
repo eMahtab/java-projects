@@ -74,3 +74,13 @@ service ProductService {
     rpc DeleteProduct(DeleteProductRequest) returns (DeleteProductResponse);
 }
 ```
+
+## Step 2 : Compile and generate the Java classes using protoc
+
+Note that we are using **`protoc-gen-grpc-java`** plugin with version 1.59.0, this grpc java plugin generates the Stub classes, making it easy to write the gRPC client and server.
+
+```
+~/Downloads/protoc-25.0-win64/bin/protoc.exe --proto_path=src/main/java/proto/ --java_out=src/main/java/ --grpc-java_out=src/main/java/ --plugin=protoc-gen-grpc-java=C:\\Users\\alamm\\Downloads\\protoc-gen-grpc-java-1.59.0-windows-x86_64.exe src/main/java/proto/ProductService.proto
+```
+
+!["protobuf-example Project"](images/project.png?raw=true)

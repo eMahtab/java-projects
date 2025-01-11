@@ -90,3 +90,32 @@ Make sure you are using the right version of protoc-gen-grpc-java plugin when co
 ```
 
 !["simple-grpc-example Project"](images/project.png?raw=true)
+
+## Step 3 : Include dependencies in pom.xml
+
+Make sure you are using the compatible version of dependencies, depending on the protoc compiler version and protoc-gen-grpc-java plugin.
+
+```xml
+<dependencies>
+        <dependency>
+            <groupId>io.grpc</groupId>
+            <artifactId>grpc-netty</artifactId>
+            <version>1.61.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.grpc</groupId>
+            <artifactId>grpc-protobuf</artifactId>
+            <version>1.61.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.grpc</groupId>
+            <artifactId>grpc-stub</artifactId>
+            <version>1.61.0</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.annotation</groupId>
+            <artifactId>javax.annotation-api</artifactId>
+            <version>1.2</version>
+        </dependency>
+</dependencies>
+```

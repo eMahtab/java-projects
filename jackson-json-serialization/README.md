@@ -16,6 +16,9 @@
 
 ## Step 2 : Serialize the Java object to Json using Jackson
 
+Serializer will serialize the RawDataResult instance to a file named **_raw_data_result.json_** inside user's home directory under jackson directory.
+
+
 ```java
 public class Serializer {
 
@@ -72,6 +75,8 @@ public class Serializer {
 
 # Step 3 : Deserialize the serialized object
 
+Deserializer will deserialize the RawDataResult instance from a file named **_raw_data_result.json_** inside user's home directory under jackson directory.
+
 ```java
 public class Deserializer {
 
@@ -105,5 +110,14 @@ public class Deserializer {
 
 ## Compairing Protobuf binary serialized and Jackson json serialized file size
 
+In [protobuf-example project](https://github.com/eMahtab/java-projects/tree/master/protobuf-example) we serialized the same RawDataResult object to a binary file using Protobuf. For this particular case, the serialized file size is same, both by using Protobuf and Jackson Json. Usually the serialized, file size from protobuf is smaller than from its Json equivalent.
+
 !["Json and Binary Serialiazed file size comparison"](images/json-and-protobuf.png?raw=true)
+
+
+# References :
+
+1. https://www.baeldung.com/jackson-object-mapper-tutorial
+
+2. https://github.com/eMahtab/java-projects/tree/master/protobuf-example
 

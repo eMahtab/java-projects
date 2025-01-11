@@ -8,7 +8,7 @@ This repository contains Java projects code.
 ## 2. Serializing & Deserializing objects using Protobuf
 [protobuf-example](https://github.com/eMahtab/java-projects/tree/master/protobuf-example)
 
-## 3. Deserializing objects in Node.js (different runtime)
+## 3. Deserializing Protocol Buffers in Node.js (different runtime)
 [nodejs-protobuf-deserialization](https://github.com/eMahtab/java-projects/tree/master/nodejs-protobuf-deserialization)
 
 ## 4. Simple gRPC server and client example    

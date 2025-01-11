@@ -45,6 +45,12 @@ main();
 
 ```
 
+## Step 3 : Run the deserializer
+
+Run the deserializer.js file with `node deserializer.js`, and deserialized RawDataResult object would be printed to console.
+
+!["Node.js Deserializer"](images/deserializer.png?raw=true)
+
 
 # References :
 

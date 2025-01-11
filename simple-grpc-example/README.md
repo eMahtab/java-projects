@@ -112,6 +112,7 @@ Make sure you are using the right version of protoc-gen-grpc-java plugin when co
             <artifactId>grpc-stub</artifactId>
             <version>1.61.0</version>
         </dependency>
+        <!-- javax.annotation-api is only required if you are using JDK 9 and above -->
         <dependency>
             <groupId>javax.annotation</groupId>
             <artifactId>javax.annotation-api</artifactId>

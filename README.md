@@ -9,7 +9,7 @@ This repository contains Java projects code.
 [protobuf-example](https://github.com/eMahtab/java-projects/tree/master/protobuf-example)
 
 ## 3. Deserializing objects in Node.js (different runtime)
-[protobuf-example](https://github.com/eMahtab/java-projects/tree/master/nodejs-protobuf-deserialization)
+[nodejs-protobuf-deserialization](https://github.com/eMahtab/java-projects/tree/master/nodejs-protobuf-deserialization)
 
 ## 4. Simple gRPC server and client example    
 [simple-grpc-example](https://github.com/eMahtab/java-projects/tree/master/simple-grpc-example)

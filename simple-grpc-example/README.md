@@ -1,5 +1,8 @@
 # Simple gRPC server and client
 
+**This example was tested with JDK 17, but it should work fine with JDK 8 and above.**
+
+
 ## Prerequisite : Download protoc to compile .proto files and generate code
 Download the **_compatible_** protoc from the https://github.com/protocolbuffers/protobuf/releases, _depending on your machine download linux-x86_64.zip or osx-x86_64.zip or win64.zip bundle of protoc._ 
 

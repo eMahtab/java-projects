@@ -9,7 +9,7 @@ Create the project and **`npm install protobufjs`**
 
 # Step 2 : Write the deserializer code
 
-```nodejs
+```js
 const fs = require("fs");
 const protobuf = require("protobufjs");
 

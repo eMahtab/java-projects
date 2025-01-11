@@ -93,7 +93,7 @@ Make sure you are using the right version of protoc-gen-grpc-java plugin when co
 
 ## Step 3 : Include dependencies in pom.xml
 
-Make sure you are using the compatible version of dependencies, depending on the protoc compiler version and protoc-gen-grpc-java plugin.
+**Make sure you are using the compatible version of dependencies, depending on the protoc compiler version and protoc-gen-grpc-java plugin.**
 
 ```xml
 <dependencies>

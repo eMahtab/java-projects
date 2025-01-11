@@ -134,7 +134,7 @@ public class Deserializer {
 }
 ```
 
-💥💥💥💥 Protocol Buffers are language neutral 
+# 💥💥💥💥 Protocol Buffers are language neutral 
 
 In [nodejs-protobuf-deserialization](https://github.com/eMahtab/java-projects/tree/master/nodejs-protobuf-deserialization) project, we deserialize the raw_data_result.bin using Node.js, so serialization and deserialization can be in different language provided that schema remains the same.
 

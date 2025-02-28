@@ -62,7 +62,7 @@ public class Main {
 
         List<Department> departments = departmentAvgExpSalary.entrySet().stream()
                 .filter(entry -> entry.getValue().getKey() > 5 && entry.getValue().getValue() < companyWideAvgSalary)
-                .map(entry -> entry.getKey())
+                .map(Map.Entry::getKey)
                 .toList();
 
         departments.forEach(System.out::println);

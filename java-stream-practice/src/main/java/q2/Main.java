@@ -1,71 +1,78 @@
 package q2;
 
-// From a list of employees with name, department, salary, and years of experience,
-// find departments where the average experience is above 5 years
-// AND the average salary is below the company-wide average salary.
+// Given a list of transactions with date, amount, and category,
+// find the category with the highest total transaction amount in each month of 2024.
+// Return a map of month to category.
 
+import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-enum Department {
-    SALES,
-    MARKETING,
-    TECH
+enum Category{
+    GROCERY,
+    SMARTPHONE,
+    FOOTWEAR,
+    APPAREL
 }
 
-class Employee {
-    private String name;
-    private Department department;
-    private double salary;
-    private float experience;
+class Transaction {
+    private LocalDate date;
+    private double amount;
+    private Category category;
 
-    Employee(String name, Department department, double salary, float experience) {
-        this.name = name;
-        this.department = department;
-        this.salary = salary;
-        this.experience = experience;
+    Transaction(LocalDate date, double amount, Category category) {
+        this.date = date;
+        this.amount = amount;
+        this.category = category;
     }
-    public Department getDepartment(){
-        return department;
+
+    public LocalDate getDate(){
+        return date;
     }
-    public float getExperience() {
-        return experience;
+    public Category getCategory() {
+        return category;
     }
-    public double getSalary() {
-        return salary;
+    public double getAmount(){
+        return amount;
     }
 }
 
 public class Main {
+
     public static void main(String[] args) {
-        List<Employee> employees = Arrays.asList(
-                new Employee("Mahtab", Department.TECH, 3000000.00d, 9.75f),
-                new Employee("Alex", Department.SALES, 2700000.00d, 10.50f),
-                new Employee("Nyugen", Department.MARKETING, 2800000.00d, 7.25f),
-                new Employee("Marc", Department.TECH, 2500000.00d, 6.00f),
-                new Employee("Svetlana", Department.MARKETING, 2800000.00d, 7.75f)
+        List<Transaction> transactions = Arrays.asList(
+              new Transaction(LocalDate.of(2025, 3, 10), 20000, Category.SMARTPHONE),
+              new Transaction(LocalDate.of(2024, 3, 10), 20000, Category.FOOTWEAR),
+              new Transaction(LocalDate.of(2024, 4, 20), 10000, Category.GROCERY),
+              new Transaction(LocalDate.of(2024, 4, 25), 15000, Category.FOOTWEAR),
+              new Transaction(LocalDate.of(2024, 4, 30), 6000, Category.GROCERY),
+              new Transaction(LocalDate.of(2024, 2, 1), 20000, Category.APPAREL),
+              new Transaction(LocalDate.of(2024, 2, 21), 10000, Category.SMARTPHONE)
         );
 
-        double companyWideAvgSalary = employees.stream().collect(Collectors.averagingDouble(Employee::getSalary));
-        System.out.println("Company Avg Salary:"+companyWideAvgSalary);
-
-        Map<Department, Double> departmentAvgExperience = employees.stream()
-                .collect(Collectors.groupingBy(Employee::getDepartment,
-                            Collectors.averagingDouble(Employee::getExperience)
+        Map<Integer, Map<Category,Double>> monthAndCategoryWise = transactions.stream()
+                .filter(transaction -> transaction.getDate().getYear() == 2024)
+                .collect(Collectors.groupingBy(transaction -> transaction.getDate().getMonthValue(),
+                        Collectors.groupingBy(Transaction::getCategory,
+                                Collectors.summingDouble(Transaction::getAmount))
                         ));
-        Map<Department, Double> departmentAvgSalary = employees.stream()
-                .collect(Collectors.groupingBy(Employee::getDepartment,
-                            Collectors.averagingDouble(Employee::getSalary)
-                        ));
-        List<Department> departments = employees.stream()
-                .map(Employee::getDepartment)
-                .distinct()
-                .filter(department -> departmentAvgExperience.get(department) > 5.0d &&
-                                                 departmentAvgSalary.get(department) < companyWideAvgSalary)
-                .collect(Collectors.toList());
 
-        departments.forEach(System.out::println);
+        Map<Integer, Category> result = monthAndCategoryWise.entrySet().stream()
+                                        .collect(
+                                                Collectors.toMap(Map.Entry::getKey,
+                                                entry -> entry.getValue().entrySet().stream()
+                                                                                   .max(Map.Entry.comparingByValue())
+                                                                                   .map(Map.Entry::getKey)
+                                                                                   .orElse(null)
+                                                )
+                                             );
+
+        // The max() method returns an Optional<Map.Entry<Category, Double>> object,
+        // the map(Map.Entry::getKey) converts this to an Optional<Category>.
+        // orElse(null), returns Category if present otherwise returns null.
+
+        result.forEach((k,v) -> System.out.println(k+" =>"+v));
     }
 }

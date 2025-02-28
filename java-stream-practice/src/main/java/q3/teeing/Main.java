@@ -1,4 +1,4 @@
-package q2.teeing;
+package q3.teeing;
 
 // From a list of employees with name, department, salary, and years of experience,
 // find departments where the average experience is above 5 years
